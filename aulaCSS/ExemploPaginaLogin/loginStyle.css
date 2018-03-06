@@ -1,0 +1,156 @@
+/**
+    Select all elements
+    The box-sizing property defines how the width and height of an element 
+    are calculated: should they include padding and borders, or not.
+*/
+*{
+    box-sizing: border-box;
+}
+
+/**
+    Font: https://fonts.googleapis.com/css?family=Work+Sans
+*/
+body{
+    font-family: "Work Sans";
+}
+
+/**
+    Main container 
+*/
+.container {
+    /** create a two-dimensional grid-based layout */
+    display:grid;
+    width:100%;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    /** Height */
+    /*vh stands for view-port height, 1vh is 1% of screen height*/
+    grid-template-rows: 40px 87vh 40px;
+    /** Width */
+    grid-template-columns: 100%; 
+}
+
+header{
+    grid-area: header;
+}
+
+header, footer{
+    background-color: #343a40;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    color:white;
+    text-align: left;
+    font-family:  "Work Sans";
+    font-size: 15px;
+    padding:5px;
+    border-radius: 5px;
+
+}
+
+span{
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+main{
+    grid-area: main;
+    padding:2px 0px;
+    height:100%;
+    margin: 2px;
+}
+
+main .background{
+    border: 2px solid black;
+    background: url("http://sguru.org/wp-content/uploads/2017/06/Mac-Wallpaper-1920x1080-1.jpg") no-repeat center center fixed;
+    width:100%;
+    background-size: cover;
+    height: inherit;   
+}
+
+main .loginBox{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    background-color: #f5f5f5;
+    width:250px;
+    margin:30px auto 30px;
+    padding: 5px 5px;
+    border-radius: 4px;
+}
+
+main form{
+    padding-left: 5px;
+}
+
+main .formButton{
+    display:inline-block;
+    background-color: #5cb85c;
+    border:1px solid #4cae4c;
+    padding:5px 5px 5px 5px;
+    margin:5px 0px 5px 6px;
+    color:white;
+    cursor:pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    width:95%;
+    animation-name: buttonColorChangeNoHover;
+    animation-duration: 2s;
+}
+
+main .formButton:hover{
+    border-color: #004E89;
+    color:white;
+    animation-name: buttonColorChangeHover;
+    animation-duration: 2s;
+}
+
+main input[type=checkbox]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+main input[type=text], input[type=password]{
+    display: inline-block;
+    border: 3px solid #555;
+    border-radius: 5px;
+    width:95%;
+    margin:0px 0px 0px 6px;
+
+}
+
+main h5{
+    margin: 5px 5px;
+    font-size: 17px;
+    font-family: "Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+main input[type=text]:focus, input[type=password]:focus{
+    background-color: lightblue;
+}
+
+footer{
+    grid-area: footer;
+    margin-top: 5px;
+}
+
+/** Used for animation: https://www.w3schools.com/css/css3_animations.asp */
+@keyframes buttonColorChangeHover {
+    from {background-color: #5cb85c;}
+    to {background-color: #004E89;}
+}
+
+@keyframes buttonColorChangeNoHover {
+    from {background-color: #004E89;}
+    to {background-color: #5cb85c;}
+}
+
+/**
+    Media query: @media rule to include a block of CSS properties only if a certain condition is true.
+    https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+*/
+@media (max-width: 600px) {
+    header span {
+        display: block;
+        text-align: center;
+    }
+
+}
