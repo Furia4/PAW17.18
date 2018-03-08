@@ -44,10 +44,9 @@ header, footer{
     font-size: 15px;
     padding:5px;
     border-radius: 5px;
-
 }
 
-span{
+header span{
     display: inline-block;
     margin: 5px 5px;
 }
@@ -57,12 +56,12 @@ main{
     padding:2px 0px;
     height:100%;
     margin: 2px;
+    font-family: "Helvetica Neue","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 main .background{
     border: 2px solid black;
     background: url("http://sguru.org/wp-content/uploads/2017/06/Mac-Wallpaper-1920x1080-1.jpg") no-repeat center center fixed;
-    width:100%;
     background-size: cover;
     height: inherit;   
 }
@@ -97,7 +96,6 @@ main .formButton{
 
 main .formButton:hover{
     border-color: #004E89;
-    color:white;
     animation-name: buttonColorChangeHover;
     animation-duration: 2s;
 }
@@ -105,7 +103,6 @@ main .formButton:hover{
 main input[type=checkbox]{
     margin-top: 10px;
     margin-bottom: 10px;
-
 }
 
 main input[type=text], input[type=password]{
@@ -117,10 +114,9 @@ main input[type=text], input[type=password]{
 
 }
 
-main h5{
+main span{
     margin: 5px 5px;
     font-size: 17px;
-    font-family: "Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 main input[type=text]:focus, input[type=password]:focus{
@@ -152,5 +148,4 @@ footer{
         display: block;
         text-align: center;
     }
-
 }
